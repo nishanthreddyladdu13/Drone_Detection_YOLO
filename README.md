@@ -1,6 +1,6 @@
 # 🛸 Vision-Based Anti-Drone Detection using YOLOv8
 
-> A robust multi-class aerial object detection framework based on **YOLOv8s** with **hard negative learning** and **dataset-level optimization** — built as a major project at NIT Calicut.
+> A robust multi-class aerial object detection framework based on **YOLOv8s** with **hard negative learning** and **dataset-level optimization**.
 
 ---
 
@@ -42,21 +42,10 @@ This project takes a data-centric angle:
 
 ---
 
-## 📁 Repository Structure
-
-```
-Drone_Detection_YOLO/
-│
-└── End_Sem.ipynb          # Full pipeline: data prep → training → evaluation → inference
-```
-
-The notebook is self-contained and designed to run on **Google Colab** with a GPU runtime.
-
----
 
 ## 🔧 Pipeline
 
-```
+```text
 Data Collection  →  Data Fusion  →  Augmentation  →  Model Training  →  Inference
    (Phase 1)          (Phase 2)        (Phase 3)         (Phase 4)        (Phase 5)
 ```
@@ -105,10 +94,10 @@ Two optional preprocessing helpers handle real-world edge cases before inference
 
 ```python
 save_dir = run_inference(
-    "path/to/image.jpg",
-    conf=0.25,
-    enhance_low_light=True,   # set False for well-lit images
-    enhance_low_res=False,
+   "path/to/image.jpg",
+   conf=0.25,
+   enhance_low_light=True,   # set False for well-lit images
+   enhance_low_res=False,
 )
 ```
 
@@ -209,23 +198,9 @@ Note: the marginal drone AP@50 decrease from (A) to (C) is expected — represen
 
 ---
 
-## 👥 Authors
-
-**Department of Electronics and Communication Engineering, NIT Calicut**
-
-| Name | Roll No. |
-|---|---|
-| Yasaswi Akkineni | B231347EC |
-| B. S. V. Hyndavi | B230537EC |
-| U. Jaya Chandra | B230712EC |
-| Harith Manoj | B230335EC |
-
-**Project Guide:** Dr. Karthik Rudramuni
-
-
 ## 📝 Acknowledgements
 
 - [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) for the detection framework
 - [Albumentations](https://albumentations.ai/) for the augmentation pipeline
 - [FiftyOne](https://voxel51.com/fiftyone/) for COCO dataset loading
-- AI-assisted tools (ChatGPT by OpenAI,Claude by Anthropic) were used for language refinement during manuscript preparation. All technical content, experiments, results, and conclusions were independently developed and validated by the authors.
+- AI-assisted tools (ChatGPT by OpenAI, Claude by Anthropic) were used for language refinement during documentation preparation. All technical content, experiments, results, and conclusions were independently developed and validated.
